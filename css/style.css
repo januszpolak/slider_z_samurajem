@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin: 2% auto;
+}
+
+.slider__container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 800px;
+}
+
+.slider__button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(12, 168, 189);
+  border: none;
+  color: white;
+  position: absolute;
+  transition: background-color 0.3s;
+}
+
+.slider__button:disabled {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+}
+.slider__button:hover {
+  background-color: rgb(9, 85, 95);
+}
+
+.slider__button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 2px solid #fff;
+  border-bottom: 0;
+  border-right: 0;
+  height: 20px;
+  width: 20px;
+}
+
+.slider__button--prev {
+  left: 0;
+}
+.slider__button--prev::before {
+  transform: translate(100%, 75%) rotate(-45deg);
+}
+
+.slider__button--next {
+  right: 0;
+}
+.slider__button--next::before {
+  transform: translate(50%, 75%) rotate(135deg);
+}
+
+.slide__image {
+  height: auto;
+  max-width: 100%;
+}
+
+.slide__caption {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+}

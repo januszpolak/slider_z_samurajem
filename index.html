@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Slider</title>
+  </head>
+  <body>
+    <main class="slider">
+      <section class="slider__container">
+        <button
+          class="slider__button slider__button--prev"
+          data-button-prev
+        ></button>
+        <figure class="slide" data-slider></figure>
+        <button
+          class="slider__button slider__button--next"
+          data-button-next
+        ></button>
+      </section>
+    </main>
+    <script src="./js/index.js"></script>
+    <script>
+      const imagesArr = [
+        "https://cdn.pixabay.com/photo/2020/02/05/09/57/spain-4820681_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2020/05/04/16/05/mckenzie-river-5129717_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2020/04/30/20/14/sky-5114501_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2020/04/13/10/48/coffee-5037804_960_720.jpg",
+      ];
+
+      const slider = new Slider(imagesArr);
+      slider.initializeSlider();
+    </script>
+  </body>
+</html>
